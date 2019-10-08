@@ -13,9 +13,9 @@ export class LineaComponent implements OnInit {
   public lineChartData: ChartDataSets[] = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Chocolate' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Maní' },
-    { data: [180, 480, 770, 90, 1000, 270, 400], label: 'Oreo', yAxisID: 'y-axis-1' }
+    { data: [80, 80, 70, 90, 100, 70, 40], label: 'Oreo', yAxisID: 'y-axis-1' }
   ];
-  public lineChartLabels: Label[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartLabels: Label[] = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
   public lineChartOptions: (ChartOptions & { annotation: any }) = {
     responsive: true,
     scales: {
@@ -23,18 +23,20 @@ export class LineaComponent implements OnInit {
       xAxes: [{}],
       yAxes: [
         {
-          id: 'y-axis-0',
+          id: 'y-axis-1',
+          //id: 'y-axis-0',
           position: 'left',
         },
         {
           id: 'y-axis-1',
           position: 'right',
-          gridLines: {
-            color: 'rgba(255,0,0,0.3)',
-          },
-          ticks: {
-            fontColor: 'red',
-          }
+          // gridLines: {
+          //   color: 'black',
+          //   // color: 'rgba(255,0,0,0.3)',
+          // },
+          // ticks: {
+          //   fontColor: 'black',
+          // }
         }
       ]
     },
@@ -84,7 +86,7 @@ export class LineaComponent implements OnInit {
   ];
   public lineChartLegend = true;
   public lineChartType = 'line';
-  public lineChartPlugins = [pluginAnnotations];
+  //public lineChartPlugins = [pluginAnnotations];
 
   @ViewChild(BaseChartDirective) chart: BaseChartDirective;
 
@@ -103,7 +105,7 @@ export class LineaComponent implements OnInit {
   }
 
   private generateNumber(i: number) {
-    return Math.floor((Math.random() * (i < 2 ? 100 : 1000)) + 1);
+    return Math.floor((Math.random() * 100) + 1);
   }
 
   // events

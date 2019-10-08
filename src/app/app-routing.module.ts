@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LineaComponent } from './components/linea/linea.component';
 import { BarraComponent } from './components/barra/barra.component';
+import { DonaComponent } from './components/dona/dona.component';
 
 const ROUTES: Routes = [
-  { path: 'linea', component: LineaComponent },
   { path: 'barra', component: BarraComponent },
+  { path: 'linea', component: LineaComponent },
+  { path: 'dona', component: DonaComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'linea' }
 ];
 
