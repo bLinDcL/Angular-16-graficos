@@ -9,6 +9,7 @@ import * as pluginAnnotations from 'chartjs-plugin-annotation';
   styleUrls: ['./linea.component.css']
 })
 export class LineaComponent implements OnInit {
+  
   public lineChartData: ChartDataSets[] = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Chocolate' },
     { data: [28, 48, 40, 19, 86, 27, 90], label: 'Maní' },
